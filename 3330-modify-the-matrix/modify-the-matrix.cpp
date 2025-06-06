@@ -1,0 +1,23 @@
+class Solution {
+public:
+    vector<vector<int>> modifiedMatrix(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+        vector<int> colMax(m, INT_MIN);
+        for (int j = 0; j < m; j++) {
+            for (int i = 0; i < n; i++) {
+                if (matrix[i][j] != -1) {
+                    colMax[j] = max(colMax[j], matrix[i][j]);
+                }
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == -1) {
+                    matrix[i][j] = colMax[j];
+                }
+            }
+        }
+        return matrix;
+    }
+};
