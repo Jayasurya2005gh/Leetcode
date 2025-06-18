@@ -1,4 +1,7 @@
 class Solution:
     def countPartitions(self, nums: List[int]) -> int:
-        return len(nums) - 1 if sum(nums) % 2 == 0 else 0
-              
+        n = len(nums)
+        total = sum(nums)
+        if total % 2 == 0:
+            return n - 1
+        return 0
