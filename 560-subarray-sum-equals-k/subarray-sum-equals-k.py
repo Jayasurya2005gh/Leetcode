@@ -11,3 +11,7 @@ class Solution:
                 count += dic[s-k]
             dic[s] = dic.get(s,0)+1
         return count
+
+
+
+        
