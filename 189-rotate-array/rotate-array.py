@@ -4,8 +4,7 @@ class Solution:
         k = k % len(nums)
         ans1 = nums[-k:]
         ans2 = nums[:-k]
+        res = ans1 + ans2
 
-        result = ans1 + ans2
         for i in range(len(nums)):
-            nums[i] = result[i]
-        return result
+            nums[i] = res[i]
