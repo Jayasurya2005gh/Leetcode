@@ -1,6 +1,6 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-
+        
         hash = {}
         for i in strs:
             sort = "".join(sorted(i))
@@ -9,4 +9,3 @@ class Solution:
             else:
                 hash[sort].append(i)
         return list(hash.values())
-        
