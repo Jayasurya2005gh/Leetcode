@@ -1,6 +1,6 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-
+        
         l = 1
         r = 1
 
@@ -9,4 +9,3 @@ class Solution:
                 nums[l] = nums[r]
                 l += 1
         return l
-        
