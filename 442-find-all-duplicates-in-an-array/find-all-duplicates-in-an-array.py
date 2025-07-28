@@ -1,6 +1,6 @@
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        
+
         pre_res = set()
         res = []
 
@@ -10,3 +10,4 @@ class Solution:
             else:
                 pre_res.add(i)
         return res
+        
