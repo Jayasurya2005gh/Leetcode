@@ -1,6 +1,6 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        
+
         res = 0
         count = 0
 
@@ -12,3 +12,4 @@ class Solution:
             else:
                 count -= 1
         return res
+        
