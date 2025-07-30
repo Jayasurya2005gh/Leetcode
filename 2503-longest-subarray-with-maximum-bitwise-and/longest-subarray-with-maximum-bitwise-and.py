@@ -4,7 +4,6 @@ class Solution:
         max_num = max(nums)
         count = 0
         max_len = 0
-
         for i in nums:
             if i == max_num:
                 count += 1
@@ -12,3 +11,4 @@ class Solution:
             else:
                 count = 0
         return max_len
+
