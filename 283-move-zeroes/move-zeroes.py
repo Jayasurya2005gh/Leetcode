@@ -1,17 +1,20 @@
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
 
-        ans1 = []
-        ans2 = []
         res = []
+        ans = []
+        count = 0
 
         for i in nums:
             if i == 0:
-                ans2.append(i)
+                count += 1
             else:
-                ans1.append(i)
+                res.append(i)
 
-        res = ans1 + ans2
+        ans = res + [0] * count
         for i in range(len(nums)):
-            nums[i] = res[i]
-        return res
+            nums[i] = ans[i]
+        return ans                
