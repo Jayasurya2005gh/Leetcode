@@ -1,6 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-
+        
         st = []
         dic = {"(":")","{":"}","[":"]"}
 
@@ -15,8 +15,8 @@ class Solution:
                         st.pop()
                     else:
                         return False
+
         if st == []:
             return True
         else:
             return False
-        
