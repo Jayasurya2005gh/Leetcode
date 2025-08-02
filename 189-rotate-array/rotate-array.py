@@ -2,9 +2,9 @@ class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
 
         k = k % len(nums)
-        ans1 = nums[-k:]
-        ans2 = nums[:-k]
-        res = ans1 + ans2
+        ans = nums[:-k]
+        res = nums[-k:]
 
+        result = res + ans
         for i in range(len(nums)):
-            nums[i] = res[i]
+            nums[i] = result[i]
