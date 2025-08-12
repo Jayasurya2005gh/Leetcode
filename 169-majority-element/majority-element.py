@@ -1,8 +1,8 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
 
-
         sort = sorted(nums)
-        mid_element = len(sort) // 2
+        total_len = len(sort)
+        mid_element = total_len // 2
         return sort[mid_element]
         
