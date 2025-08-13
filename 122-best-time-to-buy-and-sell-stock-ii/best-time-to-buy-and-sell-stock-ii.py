@@ -9,3 +9,4 @@ class Solution:
                 max_profit += prices[sell] - prices[buy]
             buy += 1
         return max_profit
+        
