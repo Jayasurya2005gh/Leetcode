@@ -11,8 +11,6 @@ class Solution:
                 return [left+1,right+1]
             elif total > target:
                 right -= 1
-            elif total < target:
-                left += 1
-            elif total == target:
+            else:
                 left += 1
         
