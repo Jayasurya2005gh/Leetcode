@@ -14,5 +14,5 @@ class Solution:
             elif total < target:
                 left += 1
             elif total == target:
-                left += 1
+                right -= 1
         
