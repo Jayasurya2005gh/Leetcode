@@ -2,16 +2,17 @@ class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
 
         ran = ransomNote
-        mag = magazine
+        mag = list(magazine)
         count = 0
-        mag_list = list(mag)
+
         for i in ran:
-            if i in mag_list:
-                mag_list.remove(i)
+            if i in mag:
+                mag.remove(i)
                 count += 1
-        if count == len(ran):
+
+        if len(ran) == count:
             return True
         else:
             return False
-
+            
         
