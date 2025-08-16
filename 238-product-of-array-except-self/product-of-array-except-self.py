@@ -4,7 +4,7 @@ class Solution:
         n = len(nums)
         prefix = 1
         suffix = 1
-        res = [1] * n
+        res = [0] * n
 
         #prefix
         for i in range(n):
