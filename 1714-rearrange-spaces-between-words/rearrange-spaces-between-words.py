@@ -1,23 +1,23 @@
 class Solution:
     def reorderSpaces(self, text: str) -> str:
-        space = 0
 
-        # Count spaces
+        space = 0      
         for i in text:
-            if i == " ":
+            if not i.isalpha():
                 space += 1
 
-        # Split words (ignores extra spaces)
+        text = text.strip()
         text_word = text.split()
 
-        # Case 1: Only one word
         if len(text_word) == 1:
-            return text_word[0] + " " * space  
+            return text_word[0]+" "*space
 
-        # Case 2: Multiple words
-        len_words = len(text_word) - 1
+        len_words = len(text_word)-1
         mid_space = space // len_words
         extra_space = space % len_words
+        
+        word_join = (" "*mid_space).join(text_word)
+        return word_join+(" "*extra_space)
 
-        word_join = (" " * mid_space).join(text_word)
-        return word_join + (" " * extra_space)
+
+       
