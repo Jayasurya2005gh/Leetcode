@@ -9,5 +9,3 @@ class Solution:
             res += strs[0][i]
         return res
         
-
-        
