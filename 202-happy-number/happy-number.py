@@ -4,8 +4,11 @@ class Solution:
         ans = str(n)
         seen = set()
         res = 0
+
+
         while ans != "1" and ans not in seen:
-            seen.add(ans)          
+            seen.add(ans)
+
             for i in ans:
                 res += int(i) * int(i)
                 ans = str(res)
