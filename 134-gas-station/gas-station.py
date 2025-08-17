@@ -11,6 +11,6 @@ class Solution:
             p += gas[i] - cost[i]
             if p < 0:
                 p = 0
-                g = i+1
+                g = i + 1
         return g
         
