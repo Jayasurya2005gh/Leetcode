@@ -4,10 +4,10 @@ class Solution:
         intervals.append(newInterval)
         intervals = sorted(intervals)
 
-        res = [intervals[0]]
+        res = []
 
         for i in intervals:
-            if res[-1][1] < i[0]:
+            if res == [] or res[-1][1] < i[0]:
                 res.append(i)
             else:
                 res[-1][1] = max(res[-1][1],i[1])
