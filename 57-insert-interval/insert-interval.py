@@ -4,7 +4,7 @@ class Solution:
         intervals.append(newInterval)
         intervals = sorted(intervals)
 
-        res = []
+        res = [intervals[0]]
 
         for i in intervals:
             if res == [] or res[-1][1] < i[0]:
