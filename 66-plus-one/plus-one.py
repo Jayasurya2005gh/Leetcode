@@ -12,7 +12,7 @@ class Solution:
 
         for i in ans:
             res.append(int(i))
-        
+
         return res
         
 
