@@ -14,7 +14,8 @@ class MyQueue:
         
 
     def peek(self) -> int:
-        return self.queue[0]       
+        return self.queue[0]
+
 
     def empty(self) -> bool:
         if self.queue == []:
