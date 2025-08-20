@@ -15,7 +15,6 @@ class Solution:
                         st.pop()
                     else:
                         return False
-
         if st == []:
             return True
         else:
