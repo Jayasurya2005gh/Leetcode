@@ -15,6 +15,6 @@ class Solution:
         for i in range(n-1,-1,-1):
             res[i] *= suffix
             suffix *= nums[i]
-
+        
         return res
         
