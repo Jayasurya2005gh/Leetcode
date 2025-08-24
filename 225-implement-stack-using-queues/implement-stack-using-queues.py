@@ -14,7 +14,8 @@ class MyStack:
         
 
     def top(self) -> int:
-        return self.stack[len(self.stack)-1]        
+        last_index = len(self.stack)-1
+        return self.stack[last_index]        
 
     def empty(self) -> bool:
         if self.stack == []:
