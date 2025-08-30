@@ -2,14 +2,13 @@ class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
 
         intervals.append(newInterval)
-        intervals = sorted(intervals)
+        nums = sorted(intervals)
+        res = [nums[0]]
 
-        res = [intervals[0]]
-
-        for i in intervals:
-            if res == [] or res[-1][1] < i[0]:
-                res.append(i)
+        for i in range(1,len(nums)):
+            if res[-1][1] < nums[i][0]:
+                res.append(nums[i])
             else:
-                res[-1][1] = max(res[-1][1],i[1])
+                res[-1][1] = max(res[-1][1],nums[i][1])
         return res
         
