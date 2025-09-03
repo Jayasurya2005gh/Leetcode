@@ -11,6 +11,6 @@ class Solution:
             total = nums[r] - nums[l]
             max_total = max(max_total,total)
             l += 1
-        return abs(max_total)
+        return max_total
 
         
