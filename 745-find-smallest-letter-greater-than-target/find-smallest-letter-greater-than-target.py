@@ -10,13 +10,10 @@ class Solution:
 
         for i in letters:
             if dic[i] > target_val:
-                res.append(dic[i])
+                res.append(i)
         
         if res != []:
-            min_res = min(res)
-            for key,value in dic.items():
-                if value == min_res:
-                    ans = key
+            ans = min(res)
         else:
             return min(letters)
         
