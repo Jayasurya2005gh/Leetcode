@@ -13,11 +13,11 @@ class Solution:
                 res.append(i)
         
         if res != []:
-            ans = min(res)
+            return min(res)
         else:
             return min(letters)
         
-        return ans
+        
         
 
 
