@@ -14,6 +14,6 @@ class Solution:
             else:
                 odd.append(i)
 
-        
-        return max(odd) - min(even)
+        ans = max(odd) - min(even)
+        return ans
         
