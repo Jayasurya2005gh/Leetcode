@@ -14,8 +14,8 @@ class Solution:
             else:
                 odd.append(i)
 
-        if not odd or not even:   # handle edge cases
-            return 0  
+        if even == [] or odd == []:
+            return 0
 
         return max(odd) - min(even)
         
