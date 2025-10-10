@@ -3,7 +3,7 @@ class Solution:
 
         nums = sorted(nums)
 
-        if len(nums) == 1 or len(nums) == 2:
+        if len(nums) <= 2:
             return -1
         else:
             return nums[1]
