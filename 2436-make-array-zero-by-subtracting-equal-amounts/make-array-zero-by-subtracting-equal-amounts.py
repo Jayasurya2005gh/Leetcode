@@ -2,7 +2,6 @@ class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
 
         nums = sorted(nums)
-
         count = 0
         sub = 0
 
@@ -15,7 +14,6 @@ class Solution:
 
             for i in range(len(nums)):
                 if nums[i] != 0:
-                    nums[i] = nums[i] - sub
-            
+                    nums[i] = nums[i] - sub            
 
         return count
