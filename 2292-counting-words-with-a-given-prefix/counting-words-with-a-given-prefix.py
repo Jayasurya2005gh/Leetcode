@@ -7,7 +7,6 @@ class Solution:
             if len(i) >= len(pref):
                 words_pref = i[:len(pref)]
                 if pref == words_pref:
-                    count += 1
-            
+                    count += 1            
         return count
         
