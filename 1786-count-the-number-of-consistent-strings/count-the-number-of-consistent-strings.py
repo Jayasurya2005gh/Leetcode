@@ -2,14 +2,14 @@ class Solution:
     def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
 
         count = 0
-        allowed = set(allowed)
+        allowed = "".join(sorted(set(allowed)))
 
         for i in words:
             i = "".join(sorted(set(i)))
-            curr_len = 0
-            for j in i:
-                if j in allowed:
-                    curr_len += 1
-                if curr_len == len(i):
+            if len(i) < len(allowed):
+                if set(i).issubset(set(allowed)):
+                    count += 1
+            else:
+                if i in allowed:
                     count += 1
         return count
