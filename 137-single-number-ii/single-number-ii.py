@@ -1,12 +1,17 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
 
-        ans = sorted(set(nums))
+        dic = {}
 
-        for i in ans:
-            if nums.count(i) == 1:
-                return i
+        for i in nums:
+            if i not in dic:
+                dic[i] = 1
+            else:
+                dic[i] += 1
 
+        for key,value in dic.items():
+            if value == 1:
+                return key
         
 
         
