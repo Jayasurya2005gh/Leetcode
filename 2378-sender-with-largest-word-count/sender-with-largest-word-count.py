@@ -25,11 +25,10 @@ class Solution:
 
         res = ""
         ans = 0
-        
-        for key, value in my_dic.items():
-            if value > ans or (value == ans and key > res):
-                res = key
-                ans = value
+        for key,values in my_dic.items():
+            if values > ans or (values == ans and key > res):
+                    res = key
+                    ans = values
 
         return res
                   
