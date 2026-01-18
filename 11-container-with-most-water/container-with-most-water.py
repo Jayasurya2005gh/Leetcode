@@ -5,7 +5,7 @@ class Solution:
         right = len(height) - 1
         max_val = 0
 
-        while left < right:
+        while left != right:
             curr_val = min(height[left],height[right]) * (right - left)
             if curr_val >= max_val:
                 max_val = curr_val
