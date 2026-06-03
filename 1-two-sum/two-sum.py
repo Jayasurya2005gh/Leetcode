@@ -6,7 +6,7 @@ class Solution:
 
         res = []
 
-        while left != len(nums):
+        while left != len(nums) - 1:
             for right in range(left + 1,len(nums)):
                 if nums[left] + nums[right] == target:
                     res.append(left)
