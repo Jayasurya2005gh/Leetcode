@@ -4,10 +4,11 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
 
-        s_join = "".join(s)
-        rev_s = list(s_join[::-1])
+        left = 0
+        right = len(s) - 1
 
-        for i in range(len(s)):
-            s[i] = rev_s[i]
-        return s
-    
+        while left < right:
+            s[left], s[right] = s[right], s[left]
+            left += 1
+            right -= 1
+        
