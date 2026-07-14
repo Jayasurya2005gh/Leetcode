@@ -8,5 +8,4 @@ class Solution:
             if i not in numbers:
                 res.append(i)
         return res
-                
         
