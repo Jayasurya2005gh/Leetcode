@@ -1,17 +1,13 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
 
+        dic = {}
         res = []
-        ans = []
 
         for i in range(len(names)):
-            res.append([names[i], heights[i]])
+            dic[heights[i]] = names[i]
 
-        sorted_res = sorted(res, key = lambda x : x[1])
-
-        for i in sorted_res:
-            ans.append(i[0])
-
-        ans = ans[::-1]
-        return ans
-        
+        sorted_dic = dict(sorted(dic.items(), reverse = True))
+        for value in sorted_dic.values():
+            res.append(value)
+        return res
