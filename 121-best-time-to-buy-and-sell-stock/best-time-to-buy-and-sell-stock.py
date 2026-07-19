@@ -8,8 +8,8 @@ class Solution:
             if i < buy:
                 buy = i
 
-            profit = i - buy
-            if profit > max_profit:
-                max_profit = profit
+            curr_profit = (i - buy)
+            if curr_profit > max_profit:
+                max_profit = curr_profit
         return max_profit
         
